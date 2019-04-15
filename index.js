@@ -11,7 +11,7 @@ const templateFile = 'template/index.html';
  * of an HTML page.
  * @param filePathInput path for input file
  */
-exports.generatePDF = (filePathInput) => {
+exports.generatePDF = (inputContent) => {
     (async () => {
         // start a browser with puppeter
         const browser = await puppeteer.launch();
@@ -19,8 +19,8 @@ exports.generatePDF = (filePathInput) => {
         await page.setJavaScriptEnabled(true);
         // we assume, the input received externally, only have the body
         // so here, we have a template in order to apply styles
-        const templateContent = String(fs.readFileSync(templateFile));
-        const inputContent = String(fs.readFileSync(filePathInput));
+        const templatePath = path.join(__dirname, templateFile);
+        const templateContent = String(fs.readFileSync(templatePath));
         // put all data together
         const view = {
             content: inputContent,
