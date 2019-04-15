@@ -1,5 +1,5 @@
 const expect = require('expect.js');
-const { generatePDF } = require('../src/index');
+const { generatePDF } = require('../index');
 
 
 describe('MapComments', () => {
