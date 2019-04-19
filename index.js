@@ -11,7 +11,7 @@ const templateFile = 'template/index.html';
  * of an HTML page.
  * @param filePathInput path for input file
  */
-exports.generatePDF = (inputContent) => {
+exports.generatePDF = (outputDir, outputFileName, inputContent) => {
     (async () => {
         // start a browser with puppeter
         const browser = await puppeteer.launch();
@@ -28,17 +28,19 @@ exports.generatePDF = (inputContent) => {
         // calls the render engine
         const output = Mustache.render(templateContent, view);
         // verify if the docs/ folder exist and creates it if not
-        const destinationDocsFolderPath = `${process.cwd()}/docs/`;
+        const destinationDocsFolderPath = `${process.cwd()}/${outputDir}/`;
         if (!fs.existsSync(destinationDocsFolderPath)) {
             fs.mkdirSync(destinationDocsFolderPath);
         }
         // write it to a file
-        fs.writeFileSync(`${process.cwd()}/docs/output.html`, output);
+        const outputHTMLFilePath = path.join(process.cwd(), outputDir, `${outputFileName}.html`);
+        const outputPDFFilePath = path.join(process.cwd(), outputDir, `${outputFileName}.pdf`);
+        fs.writeFileSync(outputHTMLFilePath, output);
         // now, go to page
-        await page.goto('file://' + process.cwd() + '/docs/output.html', { waitUntil: 'networkidle2' });
+        await page.goto(`file://${outputHTMLFilePath}`, { waitUntil: 'networkidle2' });
         await page.emulateMedia('screen');
         // generate the pdf
-        await page.pdf({ path: 'docs/output.pdf', format: 'A4' });
+        await page.pdf({ path: outputPDFFilePath, format: 'A4' });
         // close the browser
         await browser.close();
     })();
