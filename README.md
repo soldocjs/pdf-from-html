@@ -1,5 +1,5 @@
 # pdf-from-html
-pdf-from-html is a nodejs library to transform an html (probrably from [markdown-it](https://markdown-it.github.io/)) in a PDF.
+pdf-from-html is a nodejs library to transform an html (possibly from [markdown-it](https://markdown-it.github.io/)) in a PDF.
 
 ## Installation
 
@@ -15,16 +15,24 @@ yarn add pdf-from-html
 
 ## Usage
 
-It's possible to use it from command line or as a npm script.
+It's possible to use it from command line
 
 ```bash
-pdf-from-html somefile.html
+pdf-from-html docs/ somefile.html
 ```
-
+as npm script
 ```bash
 "scripts": {
-    "pdf": "pdf-from-html somefile.html"
+    "pdf": "pdf-from-html docs/ somefile.html"
 },
+```
+or as part of your nodejs app
+```js
+import { generatePDF } from 'pdf-from-html';
+// or
+// const generatePDF = require('pdf-from-html').generatePDF;
+// and then just call the method
+generatePDF(outputDir, outputFileName, inputContent);
 ```
 
 ## Contributing
