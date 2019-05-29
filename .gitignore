@@ -62,3 +62,6 @@ typings/
 
 # ignore docs
 docs/
+
+# test results
+test/result
