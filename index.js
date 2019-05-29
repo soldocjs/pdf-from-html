@@ -42,7 +42,7 @@ exports.generatePDF = (outputDir, outputFile, inputContent) => {
             } else {
                 outputFileName = outputFile;
             }
-            const outputHTMLFilePath = path.join(process.cwd(), outputDir, `${outputFileName}.html`);
+            const outputHTMLFilePath = path.join(process.cwd(), outputDir, `${outputFileName}.tmp.html`);
             const outputPDFFilePath = path.join(process.cwd(), outputDir, `${outputFileName}.pdf`);
             fs.writeFileSync(outputHTMLFilePath, output);
             // now, go to page
