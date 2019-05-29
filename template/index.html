@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.2.0/css/bootstrap.css">
     <!-- support emojies :heart: -->
     <link rel="stylesheet" href="https://afeld.github.io/emoji-css/emoji.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
     <style>
         /* some emoji class */
         .emoji {
@@ -23,12 +24,18 @@
             /* this will force puppeter to print was is exactly shown if seen in a browser */
             -webkit-print-color-adjust: exact;
         }
+
+        .content {
+            margin: 3% 15%;
+        }
     </style>
 </head>
 
 
 <body>
-    {{{content}}}
+    <div class="content">
+        {{{content}}}
+    </div>
 </body>
 
 </html>
