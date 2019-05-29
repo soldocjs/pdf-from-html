@@ -1,15 +1,13 @@
-const expect = require('expect.js');
+const fs = require('fs');
 const { generatePDF } = require('../index');
 
 
 describe('MapComments', () => {
-    const filePath = 'test/example.html';
-
     describe('generate with success', () => {
-        it('generate a file with success', () => {
+        it('generate a file with success', async () => {
             // verify
-            generatePDF(filePath);
-        });
-        
+            const exampleContent = String(fs.readFileSync('test/example.html'));
+            await generatePDF('test/result', 'example.html', exampleContent);
+        }).timeout(10000);
     });
 });
