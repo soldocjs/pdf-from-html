@@ -14,7 +14,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/obernardovieira/pdf-from-html.git"
+        "url": "git+https://github.com/soldocjs/pdf-from-html.git"
     },
     "keywords": [
         "pdf",
@@ -22,11 +22,11 @@
         "convertion"
     ],
     "author": "obernardovieira",
-    "license": "Apache-2.0",
+    "license": "GPL-3.0-only",
     "bugs": {
-        "url": "https://github.com/obernardovieira/pdf-from-html/issues"
+        "url": "https://github.com/soldocjs/pdf-from-html/issues"
     },
-    "homepage": "https://github.com/obernardovieira/pdf-from-html#readme",
+    "homepage": "https://github.com/soldocjs/pdf-from-html#readme",
     "dependencies": {
         "meow": "5.0.0",
         "mustache": "3.0.1",
