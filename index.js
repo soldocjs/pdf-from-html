@@ -33,7 +33,7 @@ exports.generatePDF = (outputDir, outputFile, inputContent) => {
             // verify if the docs/ folder exist and creates it if not
             const destinationDocsFolderPath = path.join(process.cwd(), outputDir);
             if (!fs.existsSync(destinationDocsFolderPath)) {
-                fs.mkdirSync(destinationDocsFolderPath);
+                fs.mkdirSync(destinationDocsFolderPath, { recursive: true });
             }
             // write it to a file
             let outputFileName;
