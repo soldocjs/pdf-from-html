@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { generatePDF } = require('../index');
+const { generatePDF } = require('../src/index');
 
 
 describe('MapComments', () => {
