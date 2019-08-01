@@ -3,7 +3,7 @@
 const fs = require('fs');
 var path = require('path');
 const meow = require('meow');
-const { generatePDF } = require('../index');
+const { generatePDF } = require('../src/index');
 
 const helpMessage = `
 Usage
