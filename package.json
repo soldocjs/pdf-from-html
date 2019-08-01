@@ -30,10 +30,10 @@
     "dependencies": {
         "meow": "5.0.0",
         "mustache": "3.0.1",
-        "puppeteer": "1.18.1"
+        "puppeteer": "1.19.0"
     },
     "devDependencies": {
         "expect.js": "0.3.1",
-        "mocha": "6.1.4"
+        "mocha": "6.2.0"
     }
 }
