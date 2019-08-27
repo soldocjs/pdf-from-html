@@ -18,7 +18,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/soldocjs/pdf-from-html.git"
+        "url": "git+https://github.com/hq20/pdf-from-html.git"
     },
     "keywords": [
         "pdf",
@@ -28,9 +28,9 @@
     "author": "obernardovieira",
     "license": "GPL-3.0-only",
     "bugs": {
-        "url": "https://github.com/soldocjs/pdf-from-html/issues"
+        "url": "https://github.com/hq20/pdf-from-html/issues"
     },
-    "homepage": "https://github.com/soldocjs/pdf-from-html#readme",
+    "homepage": "https://github.com/hq20/pdf-from-html#readme",
     "dependencies": {
         "meow": "5.0.0",
         "mustache": "3.0.1",
