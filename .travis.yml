@@ -1,0 +1,12 @@
+dist: xenial
+
+language: node_js
+
+node_js:
+    - "lts/dubnium"
+
+install:
+    - yarn
+
+script:
+    - yarn test
