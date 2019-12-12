@@ -18,6 +18,24 @@ describe('MapComments', () => {
                 'pica - high quality and fast image resize in browser.',
                 'babelfish - developer friendly i18n with plurals support and easy syntax.',
                 'You will like those projects!',
+                'h1 Heading',
+                'h2 Heading',
+                'h3 Heading',
+                'h4 Heading',
+                'h5 Heading',
+                'h6 Heading',
+                'Horizontal Rules',
+                'Typographic replacements\nEnable typographer option to see result.',
+                // '©©®®™™§§±',
+                'test… test… test… test?.. test!..',
+                '!!! ??? , – —',
+                '“Smartypants, double quotes” and ‘single quotes’',
+                'This is bold text',
+                'This is bold text',
+                'This is italic text',
+                'This is italic text',
+                'Strikethrough',
+                'Blockquotes',
             ];
             // log pdf info
             pdfUtil.info(pdfPath, function(err, info) {
@@ -33,6 +51,6 @@ describe('MapComments', () => {
                     expect(data.indexOf(c) > -1).to.be.true;
                 });
             });
-        }).timeout(10000);
+        }).timeout(20000);
     });
 });
