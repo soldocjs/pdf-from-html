@@ -1,18 +1,13 @@
 {
     "name": "pdf-from-html",
-    "version": "0.1.1",
+    "version": "0.1.2-beta",
     "description": "Generate PDF file using an HTML file as input for the body.",
     "main": "src/index.js",
     "files": [
         "/src",
         "/bin"
     ],
-    "bin": {
-        "pdf-from-html": "bin/cli.js"
-    },
-    "directories": {
-        "test": "test"
-    },
+    "bin": "bin/cli.js",
     "scripts": {
         "test": "mocha"
     },
@@ -25,18 +20,21 @@
         "html",
         "convertion"
     ],
-    "author": "obernardovieira",
+    "author": "hq20",
     "license": "GPL-3.0-only",
     "bugs": {
         "url": "https://github.com/hq20/pdf-from-html/issues"
     },
     "homepage": "https://github.com/hq20/pdf-from-html#readme",
-    "dependencies": {
-        "meow": "5.0.0",
-        "mustache": "3.1.0",
-        "puppeteer": "1.20.0"
+    "peerDependencies": {
+        "meow": "5.0.x",
+        "mustache": "3.1.x",
+        "puppeteer": "1.20.x"
     },
     "devDependencies": {
+        "meow": "5.0.0",
+        "mustache": "3.1.0",
+        "puppeteer": "1.20.0",
         "chai": "4.2.0",
         "expect.js": "0.3.1",
         "mocha": "6.2.2",
