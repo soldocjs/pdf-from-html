@@ -1,9 +1,13 @@
 const path = require('path');
 const fs = require('fs');
-const pdfUtil = require('pdf-to-text');
+const util = require('util');
+const promisify = util.promisify;
+const { info, pdfToText } = require('pdf-to-text');
 const { expect } = require('chai');
 const { generatePDF } = require('../src/index');
 
+const promiseInfo = promisify(info);
+const promisePdfToText = promisify(pdfToText);
 
 describe('MapComments', () => {
     describe('generate with success', () => {
@@ -38,19 +42,13 @@ describe('MapComments', () => {
                 'Blockquotes',
             ];
             // log pdf info
-            pdfUtil.info(pdfPath, function(err, info) {
-                if (err) throw(err);
-                console.log(info);
-            });
+            const info = await promiseInfo(pdfPath);
+            console.log(info);
             // verify
-            pdfUtil.pdfToText(pdfPath, (err, data) => {
-                if (err) {
-                    throw (err);
-                }
-                content.forEach((c) => {
-                    expect(data.indexOf(c) > -1).to.be.true;
-                });
-            });
+            const data = await promisePdfToText(pdfPath);
+            for (let c = 0; c < content.length; c += 1) {
+                expect(data.indexOf(content[c]) > -1).to.be.true;
+            };
         }).timeout(20000);
     });
 });
