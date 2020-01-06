@@ -32,7 +32,7 @@
         "puppeteer": "1.20.x"
     },
     "devDependencies": {
-        "meow": "5.0.0",
+        "meow": "6.0.0",
         "mustache": "3.2.1",
         "puppeteer": "1.20.0",
         "chai": "4.2.0",
