@@ -33,7 +33,7 @@
     },
     "devDependencies": {
         "meow": "6.0.0",
-        "mustache": "3.2.1",
+        "mustache": "4.0.0",
         "puppeteer": "2.0.0",
         "chai": "4.2.0",
         "expect.js": "0.3.1",
