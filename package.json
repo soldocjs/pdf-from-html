@@ -27,9 +27,9 @@
     },
     "homepage": "https://github.com/hq20/pdf-from-html#readme",
     "peerDependencies": {
-        "meow": "^6.0.0",
-        "mustache": "^3.2.0",
-        "puppeteer": "^2.0.0"
+        "meow": "^7.0.0",
+        "mustache": "^4.0.0",
+        "puppeteer": "^3.0.0"
     },
     "devDependencies": {
         "meow": "7.0.0",
